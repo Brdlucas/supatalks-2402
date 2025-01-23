@@ -4,12 +4,6 @@
 {% endblock %}
 
 {% block body %}
-	{% if app.user %}
-		<div class="bg-dark text-center text-white p-3">
-			Back to your
-			<a href={{ path('admin') }} class="btn btn-light btn-sm rounded-pill text-dark">dashboard</a>
-		</div>
-	{% endif %}
 	<div class="container">
 		<div class="">
 			{{ include('components/header.html.twig') }}
