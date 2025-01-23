@@ -16,7 +16,6 @@ class PageController extends AbstractController
         $posts = $pr->findAll();
         return $this->render('page/posts.html.twig', [
             'posts' => $posts,
-            5
         ]);
     }
 
