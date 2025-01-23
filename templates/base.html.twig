@@ -21,7 +21,12 @@
 		<nav class=" gap-5 my-3 mx-5 fs-3 list-inline d-flex flex-row justify-content-end">
 			<a href='/' class="text-decoration-none ">home</a>
 			<a href={{ path('app_posts') }} class="text-decoration-none">posts</a>
-			<a href={{ path('app_login') }} class="text-decoration-none">login</a>
+			{% if app.user %}
+				<a href={{ path('admin') }} class="text-decoration-none">dashboard</a>
+				<a href={{ path('app_logout') }} class="text-decoration-none">logout</a>
+			{% else %}
+				<a href={{ path('app_login') }} class="text-decoration-none">login</a>
+			{% endif %}
 		</nav>
 		{% block body %}{% endblock %}
 	</body>
