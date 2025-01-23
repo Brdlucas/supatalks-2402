@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Post!
+{% endblock %}
+
+{% block body %}
+	<div href={{ path('app_post_id', {'id': post.id} ) }}>
+		<h4>{{post.title}}</h4>
+		<img src={{post.image}} alt="">
+		<p>
+			{{post.content}}
+		</p>
+	</div>
+{% endblock %}
