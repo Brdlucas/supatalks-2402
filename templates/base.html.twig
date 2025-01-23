@@ -12,7 +12,6 @@
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
 
 		{% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
 			{% block importmap %}
 				{{ importmap('app') }}
 			{% endblock %}
@@ -21,7 +20,8 @@
 	<body>
 		<nav class=" gap-5 my-3 mx-5 fs-3 list-inline d-flex flex-row justify-content-end">
 			<a href='/' class="text-decoration-none ">home</a>
-			<a href={{ path('app_posts') }} class="text-decoration-none bg-black">posts</a>
+			<a href={{ path('app_posts') }} class="text-decoration-none">posts</a>
+			<a href={{ path('app_login') }} class="text-decoration-none">login</a>
 		</nav>
 		{% block body %}{% endblock %}
 	</body>
