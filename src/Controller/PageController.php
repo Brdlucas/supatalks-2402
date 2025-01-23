@@ -20,10 +20,8 @@ class PageController extends AbstractController
             10 /* limit per page */
         );
 
-        $posts = $pr->findAll();
         return $this->render('page/posts.html.twig', [
             'posts' => $pagination,
-            'pagination' => $pagination
         ]);
     }
 
