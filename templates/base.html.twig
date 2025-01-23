@@ -18,13 +18,9 @@
 		{% endblock %}
 	</head>
 	<body>
-		<nav class=" gap-5 m-3 fs-3 list-inline d-flex flex-row justify-content-end">
-			<div class="p-5 bg-danger">
-				<a href='/' class="text-decoration-none ">home</a>
-			</div>
-			<div>
-				<a href={{ path('app_posts') }} class="text-decoration-none bg-black">posts</a>
-			</div>
+		<nav class=" gap-5 my-3 mx-5 fs-3 list-inline d-flex flex-row justify-content-end">
+			<a href='/' class="text-decoration-none ">home</a>
+			<a href={{ path('app_posts') }} class="text-decoration-none bg-black">posts</a>
 		</nav>
 		{% block body %}{% endblock %}
 	</body>

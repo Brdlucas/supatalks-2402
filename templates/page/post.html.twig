@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block body %}
-	<div href={{ path('app_post_id', {'id': post.id} ) }}>
+	<div class="d-flex flex-column justify-content-center align-items-center">
 		<h4>{{post.title}}</h4>
 		<img src={{post.image}} alt="">
 		<p>
