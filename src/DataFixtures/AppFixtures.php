@@ -110,8 +110,8 @@ class AppFixtures extends Fixture
         for ($i = 0; $i < 200; $i++) {
             $post = new Post();
             $post->setTitle($faker->title());
-            $post->setContent($faker->paragraph());
-            $post->setImage(('https://picsum.photos/1280/720?random=' . $i));
+            $post->setContent($faker->paragraph(8));
+            $post->setImage(('https://picsum.photos/800/420?random=' . $i));
             $post->setIsPublished($faker->boolean());
             $post->setUser($faker->randomElement($userArray));
 
