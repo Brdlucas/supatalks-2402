@@ -19,4 +19,15 @@ class PageController extends AbstractController
             5
         ]);
     }
+
+    #[Route('/posts/{id}', name: 'app_post_id', methods: ['GET'])] // Method get pour seulement récupérer les informations
+    public function postsId(PostRepository $pr, string $id): Response
+    {
+
+        $post = $pr->findOneBy(['id' => $id]);
+        return $this->render('page/post.html.twig', [
+            'post' => $post,
+
+        ]);
+    }
 }
