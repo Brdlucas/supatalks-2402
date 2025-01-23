@@ -30,6 +30,7 @@ class AppFixtures extends Fixture
             $user->setEmail($faker->email());
             $user->setPassword('$2y$13$NJpGg/WaTYG0ONkZkf6tvuPVmkuexwRQqozQKsp5b8yc9z9B3ziMG');
             $user->setRoles(['ROLE_USER']);
+            $user->setNickname($faker->name());
 
 
             // Permet de créer une référence pour pouvoir l'utiliser dans la loop posts
@@ -109,8 +110,8 @@ class AppFixtures extends Fixture
         //  Création d'un loop qui permet de créer au moin 200 posts
         for ($i = 0; $i < 200; $i++) {
             $post = new Post();
-            $post->setTitle($faker->title());
-            $post->setContent($faker->paragraph(8));
+            $post->setTitle($faker->jobTitle());
+            $post->setContent($faker->text());
             $post->setImage(('https://picsum.photos/800/420?random=' . $i));
             $post->setIsPublished($faker->boolean());
             $post->setUser($faker->randomElement($userArray));
