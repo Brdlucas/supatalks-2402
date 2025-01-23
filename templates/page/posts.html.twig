@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PageController!
+{% endblock %}
+
+{% block body %}
+	<h1>POSTS</h1>
+	{% for value in posts %}
+		<a href={{ path('app_post_id', {'id': value.id} ) }}>
+			<h4>{{value.title}}</h4>
+			<img src={{value.image}} alt="">
+			<p>
+				{{value.content}}
+			</p>
+		</a>
+	{% endfor %}
+{% endblock %}
